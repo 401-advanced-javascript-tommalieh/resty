@@ -1,5 +1,5 @@
 import React from 'react';
-import Counter from '../counter/counter.js'
+// import Counter from '../counter/counter.js'
 import './form.scss';
 
 
