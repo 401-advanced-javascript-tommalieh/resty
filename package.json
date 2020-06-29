@@ -2,7 +2,7 @@
   "name": "resty",
   "version": "0.1.0",
   "main": "src/index.js",
-  "homepage": "https://tommalieh.github.io/resty/",
+  "homepage": "https://401-advanced-javascript-tommalieh.github.io/resty/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
