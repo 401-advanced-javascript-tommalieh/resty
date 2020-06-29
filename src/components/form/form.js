@@ -12,16 +12,19 @@ class Form extends React.Component {
     changeHandler = (e) => {
         const url = e.target.value;
         this.setState({ url });
-        console.log(url);
+        // console.log(url);
     }
     selectHandler = (e) => {
         const method = e.target.value;
         this.setState({method});
-        console.log(method);
+        // console.log(method);
     }
     submitHandler = (e) => {
-        e.preventDefault();
-        console.log(e);
+        // e.preventDefault();
+        const url = '';
+        const method = '';
+        this.setState({url, method})
+        // console.log(e.target.value);
     }
 
 
