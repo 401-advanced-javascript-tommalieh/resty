@@ -1,6 +1,7 @@
 import React from 'react';
 // import Counter from '../counter/counter.js'
 import './form.scss';
+// import Results from '../results/results.js'
 
 
 class Form extends React.Component {
@@ -19,18 +20,29 @@ class Form extends React.Component {
         this.setState({method});
         // console.log(method);
     }
-    submitHandler = (e) => {
-        // e.preventDefault();
+    submitHandler = async (e) => {
+        e.preventDefault();
         const url = '';
         const method = '';
+        e.target.reset();
         this.setState({url, method})
+        await this.fetchHandler(e);
         // console.log(e.target.value);
     }
-
-
+    fetchHandler = async (e) => {
+        try{
+        const rawApiData = await fetch(this.state.url);
+        const jsonApiData = await rawApiData.json();
+        console.log(jsonApiData.results)
+        console.log(jsonApiData)
+        this.props.handler(jsonApiData)
+    }catch(err){
+        console.log(err)
+    }
+    }
 
     render() {
-        return (
+        return (    
             <>
             <form onSubmit={this.submitHandler}>
                 <label htmlFor="url">URL:  </label>
@@ -46,8 +58,6 @@ class Form extends React.Component {
                 <input type="radio" id="delete" name="method" value="delete" onChange={this.selectHandler}></input>
                 <label htmlFor="delete">DELETE</label>
            </form>
-           <div id="formResult"><span>{this.state.method}</span><span>{this.state.url}</span></div>
-
            </>
         )
     }
