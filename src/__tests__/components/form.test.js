@@ -27,27 +27,27 @@ describe('<Form/>', () => {
     form.find('input[type="radio"]').at(1).simulate('change',{ target: { value: 'get' } });
     expect(form.state('method')).toEqual('get');
   });
-  it('display user request', () => {
-    const form = mount(<Form/>);
-    form.find('input[type="radio"]').at(1).simulate('change',{ target: { value: 'get' } });
-    form.find('#url').simulate('change', {target: {value: 'abc'}});
+  // it('display user request', () => {
+  //   const form = mount(<Form/>);
+  //   form.find('input[type="radio"]').at(1).simulate('change',{ target: { value: 'get' } });
+  //   form.find('#url').simulate('change', {target: {value: 'abc'}});
 
-    expect(form.find('div').html()).toEqual('<div id="formResult"><span>get</span><span>abc</span></div>');
-  });
-  it('should empty the output and reset the state on submission', () => {
-    const form = mount(<Form/>);
-    form.find('input[type="radio"]').at(1).simulate('change',{ target: { value: 'get' } });
-    form.find('#url').simulate('change', {target: {value: 'abc'}});
-    expect(form.state('method')).toEqual('get');
-    expect(form.state('url')).toEqual('abc');
-    expect(form.find('div').html()).toEqual('<div id="formResult"><span>get</span><span>abc</span></div>');
+  //   expect(form.find('div').html()).toEqual('<div id="formResult"><span>get</span><span>abc</span></div>');
+  // });
+  // it('should empty the output and reset the state on submission', () => {
+  //   const form = mount(<Form/>);
+  //   form.find('input[type="radio"]').at(1).simulate('change',{ target: { value: 'get' } });
+  //   form.find('#url').simulate('change', {target: {value: 'abc'}});
+  //   expect(form.state('method')).toEqual('get');
+  //   expect(form.state('url')).toEqual('abc');
+  //   expect(form.find('div').html()).toEqual('<div id="formResult"><span>get</span><span>abc</span></div>');
 
-    form.simulate('submit');
-    // console.log(form.state('url'))
-    expect(form.state('method')).toEqual('');
-    expect(form.state('url')).toEqual('');
-    expect(form.find('div').html()).toEqual('<div id="formResult"><span></span><span></span></div>');
-  });
+  //   form.simulate('submit');
+  //   // console.log(form.state('url'))
+  //   expect(form.state('method')).toEqual('');
+  //   expect(form.state('url')).toEqual('');
+  //   expect(form.find('div').html()).toEqual('<div id="formResult"><span></span><span></span></div>');
+  // });
   // it('obeys the styling rules for checkboxes', () => {
   //     const form = mount(<Form/>);
   //     let checkBoxStyle = form.find('input[type="radio"]').at(1);
