@@ -1,12 +1,12 @@
-# LAB - Class 26
+# LAB - Class 28
 
-## Topic: Component Based UI
+## Topic: Props and State
 
 ### Author: Muhammed Tommalieh
 
 ### Links and Resources
 
-- [submission PR](https://github.com/401-advanced-javascript-tommalieh/caps/pull/1)
+- [submission PR](https://github.com/401-advanced-javascript-tommalieh/caps/pull/6)
 
 #### Running the app
 
@@ -14,8 +14,8 @@
 
 #### Tests
 
-- Only visual tests were preformed
-- Jest and lint tests we skipped due to not being required for this class
+- Visual tests were preformed
+- Enzyme and lint tests were preformed
 
 #### UML
 
