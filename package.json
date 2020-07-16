@@ -2,7 +2,7 @@
   "name": "resty",
   "version": "0.1.0",
   "main": "src/index.js",
-  "homepage": "https://401-advanced-javascript-tommalieh.github.io/resty/",
+  "homepage": "/",
   "private": true,
   "dependencies": {
     "gh-pages": "^3.1.0",
@@ -16,7 +16,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "CI= react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
